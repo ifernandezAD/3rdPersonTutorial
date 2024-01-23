@@ -11,7 +11,7 @@ public class PlayerFreeLookState : PlayerBaseState
 
     public override void Enter()
     {
-
+        stateMachine.InputReader.TargetEvent += OnTarget;
     }
 
 
@@ -27,7 +27,6 @@ public class PlayerFreeLookState : PlayerBaseState
             return;
         }
 
-
         stateMachine.Animator.SetFloat(FreeLookSpeedHash, 1, AnimatorDampTime, deltaTime);
         FaceMovementDirection(movement,deltaTime);
     }
@@ -35,7 +34,14 @@ public class PlayerFreeLookState : PlayerBaseState
 
     public override void Exit()
     {
+        stateMachine.InputReader.TargetEvent -= OnTarget;
+    }
 
+    private void OnTarget()
+    {
+        if (!stateMachine.Targeter.SelectTarget()) { return; }
+
+        stateMachine.SwitchState(new PlayerTargetingState(stateMachine));
     }
 
     private Vector3 CalculateMovement()
