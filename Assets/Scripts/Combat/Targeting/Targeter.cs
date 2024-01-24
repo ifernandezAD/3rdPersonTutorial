@@ -1,9 +1,11 @@
-using System.Collections;
+using Cinemachine;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Targeter : MonoBehaviour
 {
+    [SerializeField] private CinemachineTargetGroup cineTargetGroup;
+
     private List<Target> targets = new List<Target>();
 
     public Target CurrentTarget { get; private set; }
@@ -13,6 +15,7 @@ public class Targeter : MonoBehaviour
         if (other.TryGetComponent<Target>(out Target target))
         {
             targets.Add(target);
+            target.OnDestroyed += RemoveTarget;
         }
     }
 
@@ -20,21 +23,37 @@ public class Targeter : MonoBehaviour
     {
         if (other.TryGetComponent<Target>(out Target target))
         {
-            targets.Remove(target);
+            RemoveTarget(target);
         }
     }
 
     public bool SelectTarget()
     {
-        if(targets.Count == 0) { return false; }
+        if (targets.Count == 0) { return false; }
 
         CurrentTarget = targets[0];
+        cineTargetGroup.AddMember(CurrentTarget.transform, 1f, 2f);
 
         return true;
     }
 
     public void Cancel()
     {
+        if (CurrentTarget == null) { return; }
+
+        cineTargetGroup.RemoveMember(CurrentTarget.transform);
         CurrentTarget = null;
+    }
+
+    private void RemoveTarget(Target target)
+    {
+        if (CurrentTarget == target)
+        {
+            cineTargetGroup.RemoveMember(CurrentTarget.transform);
+            CurrentTarget = null;
+        }
+
+        target.OnDestroyed -= RemoveTarget;
+        targets.Remove(target);
     }
 }
