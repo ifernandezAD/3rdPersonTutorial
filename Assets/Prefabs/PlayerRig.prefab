@@ -259,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3457037897236866522}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21712318, y: -0.000033418317, z: 0.000007433215, w: 0.97614425}
+  m_LocalRotation: {x: 0.21712318, y: -0.000033417975, z: 0.0000074331397, w: 0.97614425}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -339,7 +339,7 @@ Transform:
   m_GameObject: {fileID: 3608542300392612529}
   serializedVersion: 2
   m_LocalRotation: {x: 1e-45, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00000006882553, y: -0.00000059604645, z: 4.2720017}
+  m_LocalPosition: {x: 0.00000006882552, y: -0.00000059604645, z: 4.2720017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -764,7 +764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5497823874900930895}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17842473, y: 0.000000008465141, z: -0.0000000015350219, w: 0.9839536}
+  m_LocalRotation: {x: 0.17842473, y: -0.00000000846514, z: 0.0000000015350217, w: 0.9839536}
   m_LocalPosition: {x: 2.519705, y: 1.6167765, z: -1.3980017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1228,9 +1228,19 @@ PrefabInstance:
       objectReference: {fileID: 1535556714367056889}
     - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
         type: 3}
+      propertyPath: <Controller>k__BackingField
+      value: 
+      objectReference: {fileID: 3059824092813288512}
+    - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
+        type: 3}
       propertyPath: <ForceReceiver>k__BackingField
       value: 
       objectReference: {fileID: 6807242672049480239}
+    - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
+        type: 3}
+      propertyPath: <TargetingMovementSpeed>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4510973289592993756, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
         type: 3}
       propertyPath: cineTargetGroup
