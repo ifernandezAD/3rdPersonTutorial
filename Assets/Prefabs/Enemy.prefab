@@ -2574,9 +2574,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7628576917671483394}
   - component: {fileID: 1657590966204951281}
+  - component: {fileID: 2941833416222725026}
+  - component: {fileID: 8003373439249292078}
   - component: {fileID: 3532710089840095248}
   - component: {fileID: 2259270593000187610}
-  - component: {fileID: 8003373439249292078}
+  - component: {fileID: 4197705356259792808}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2629,6 +2631,43 @@ CharacterController:
   m_SkinWidth: 0.03
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &2941833416222725026
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9184564897819380649}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2522eda6fa8c524fa505c224616b3a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8003373439249292078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9184564897819380649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31843ea23f22eec4b9914043e89fc916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Animator>k__BackingField: {fileID: 2941833416222725026}
+  <Controller>k__BackingField: {fileID: 1657590966204951281}
+  <ForceReceiver>k__BackingField: {fileID: 4197705356259792808}
+  <PlayerChasingRange>k__BackingField: 10
 --- !u!114 &3532710089840095248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2654,7 +2693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
---- !u!114 &8003373439249292078
+--- !u!114 &4197705356259792808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2663,9 +2702,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9184564897819380649}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31843ea23f22eec4b9914043e89fc916, type: 3}
+  m_Script: {fileID: 11500000, guid: ad9925b2d8cda3c4fb27cef7430e77e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 1657590966204951281}
+  drag: 0.3
 --- !u!1 &9198236046905870706
 GameObject:
   m_ObjectHideFlags: 0
