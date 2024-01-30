@@ -13,8 +13,7 @@ public class EnemyIdleState : EnemyBaseState
       
     public override void Enter()
     {
-        stateMachine.Animator.CrossFadeInFixedTime(LocomotionBlendTreeHash, CrossFadeDuration);
-        
+        stateMachine.Animator.CrossFadeInFixedTime(LocomotionBlendTreeHash, CrossFadeDuration);       
     }
   
     public override void Tick(float deltaTime)
@@ -23,8 +22,7 @@ public class EnemyIdleState : EnemyBaseState
 
         if (IsInChaseRange())
         {
-            Debug.Log("In range");
-            //Transition to chasing state
+            stateMachine.SwitchState(new EnemyChasingState(stateMachine));
             return;
         }
 
