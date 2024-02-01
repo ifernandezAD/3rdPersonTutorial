@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyChasingState : EnemyBaseState
@@ -29,7 +26,7 @@ public class EnemyChasingState : EnemyBaseState
             stateMachine.SwitchState(new EnemyAttackingState(stateMachine));
             return;
         }
-        
+
         MoveToPlayer(deltaTime);
         FacePlayer();
 
@@ -39,14 +36,17 @@ public class EnemyChasingState : EnemyBaseState
     public override void Exit()
     {
         stateMachine.Agent.ResetPath();
-        stateMachine.Agent.velocity = Vector3.zero;  
-    } 
-    
+        stateMachine.Agent.velocity = Vector3.zero;
+    }
+
     private void MoveToPlayer(float deltaTime)
     {
-        stateMachine.Agent.destination = stateMachine.Player.transform.position;
+        if (stateMachine.Agent.isOnNavMesh)
+        {
+            stateMachine.Agent.destination = stateMachine.Player.transform.position;
 
-        Move(stateMachine.Agent.desiredVelocity.normalized * stateMachine.MovementSpeed,deltaTime);
+            Move(stateMachine.Agent.desiredVelocity.normalized * stateMachine.MovementSpeed, deltaTime);
+        }
 
         stateMachine.Agent.velocity = stateMachine.Controller.velocity;
     }
