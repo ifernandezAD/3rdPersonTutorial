@@ -20,5 +20,5 @@ public class Attack
 
     [field: SerializeField] public int Damage { get; private set; }
 
-
+    [field: SerializeField] public float Knockback { get; private set; }
 }
