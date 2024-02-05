@@ -18,6 +18,12 @@ public class PlayerStateMachine : StateMachine
 
     [field: SerializeField] public float RotationDamping { get; private set; }
 
+    [field: SerializeField] public float DodgeDuration { get; private set; }
+
+    [field: SerializeField] public float DodgeLenght { get; private set; }
+
+    [field: SerializeField] public float DodgeCooldown { get; private set; }
+
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
 
     [field: SerializeField] public WeaponDamage Weapon { get; private set; }
@@ -30,7 +36,7 @@ public class PlayerStateMachine : StateMachine
 
 
     public Transform MainCameraTransform { get; private set; }
-
+    public float PreviousDodgeTime { get; private set; } = Mathf.NegativeInfinity;
 
     private void OnEnable()
     {
@@ -53,6 +59,11 @@ public class PlayerStateMachine : StateMachine
     private void HandleDie()
     {
         SwitchState(new PlayerDeadState(this));
+    }
+
+    public void SetDodgeTime(float dodgeTime)
+    {
+        PreviousDodgeTime = dodgeTime;
     }
 
     private void OnDisable()
