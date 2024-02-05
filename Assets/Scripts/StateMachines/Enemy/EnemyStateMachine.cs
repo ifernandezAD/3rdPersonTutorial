@@ -18,6 +18,8 @@ public class EnemyStateMachine : StateMachine
 
     [field: SerializeField] public Health Health { get; private set; }
 
+    [field: SerializeField] public Target Target { get; private set; }
+
     [field: SerializeField] public float MovementSpeed { get; private set; }
 
     [field: SerializeField] public float PlayerChasingRange { get; private set; }
@@ -26,13 +28,14 @@ public class EnemyStateMachine : StateMachine
 
     [field: SerializeField] public int AttackDamage { get; private set; }
 
-    [field: SerializeField] public float AttackKnockback { get; private set; }
+    [field: SerializeField] public float AttackKnockback { get; private set; }  
 
     public GameObject Player { get; private set; }
 
     private void OnEnable()
     {
         Health.OnTakeDamage += HandleTakeDamage;
+        Health.OnDie += HandleDie;
     }
 
     private void Start()
@@ -51,6 +54,11 @@ public class EnemyStateMachine : StateMachine
         SwitchState(new EnemyImpactState(this));
     }
 
+    private void HandleDie()
+    {
+        SwitchState(new EnemyDeadState(this));
+    }
+
 
     private void OnDrawGizmosSelected()
     {
@@ -61,5 +69,6 @@ public class EnemyStateMachine : StateMachine
     private void OnDisable()
     {
         Health.OnTakeDamage -= HandleTakeDamage;
+        Health.OnDie -= HandleDie;
     }
 }

@@ -11,6 +11,7 @@ public class PlayerImpactState : PlayerBaseState
 
     public PlayerImpactState(PlayerStateMachine stateMachine) : base(stateMachine){}
     
+
     public override void Enter()
     {
         stateMachine.Animator.CrossFadeInFixedTime(ImpactHash, CrossFadeDuration);
