@@ -424,18 +424,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 401165506}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &436829220 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3532710089840095248, guid: e4940bdc362ed4b4e8c08b6933a900a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 5030367530249461278}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f0f5c0082723441b57f39225d35564, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &635822914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -792,12 +780,12 @@ PrefabInstance:
     - target: {fileID: 1736970848432016026, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000033276752
+      value: -0.0000332735
       objectReference: {fileID: 0}
     - target: {fileID: 1736970848432016026, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000008037956
+      value: 0.00000803717
       objectReference: {fileID: 0}
     - target: {fileID: 2331599191341324554, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
@@ -812,32 +800,32 @@ PrefabInstance:
     - target: {fileID: 2608608610194567679, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.33416605
+      value: -1.3012218
       objectReference: {fileID: 0}
     - target: {fileID: 2608608610194567679, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.33286905
+      value: -0.8604889
       objectReference: {fileID: 0}
     - target: {fileID: 2608608610194567679, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98380584
+      value: 0.9960484
       objectReference: {fileID: 0}
     - target: {fileID: 2608608610194567679, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1792378
+      value: 0.088812694
       objectReference: {fileID: 0}
     - target: {fileID: 2608608610194567679, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000031594198
+      value: -0.000029110071
       objectReference: {fileID: 0}
     - target: {fileID: 2608608610194567679, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000575609
+      value: 0.0000025956012
       objectReference: {fileID: 0}
     - target: {fileID: 2674671282564637786, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
@@ -912,17 +900,17 @@ PrefabInstance:
     - target: {fileID: 6268007245065841853, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008465141
+      value: -0.00000000846514
       objectReference: {fileID: 0}
     - target: {fileID: 6268007245065841853, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000015350219
+      value: 0.0000000015350217
       objectReference: {fileID: 0}
     - target: {fileID: 6442945104418569748, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000006882553
+      value: 0.00000006882552
       objectReference: {fileID: 0}
     - target: {fileID: 6534598621252197863, guid: c6d31dd98c9840d428e00c906c0c4334,
         type: 3}
@@ -1845,11 +1833,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8003373439249292078, guid: e4940bdc362ed4b4e8c08b6933a900a4,
-        type: 3}
-      propertyPath: <Target>k__BackingField
-      value: 
-      objectReference: {fileID: 436829220}
     - target: {fileID: 9184564897819380649, guid: e4940bdc362ed4b4e8c08b6933a900a4,
         type: 3}
       propertyPath: m_Name
