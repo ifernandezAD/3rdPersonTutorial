@@ -24,6 +24,8 @@ public class PlayerStateMachine : StateMachine
 
     [field: SerializeField] public float DodgeCooldown { get; private set; }
 
+    [field: SerializeField] public float JumpForce { get; private set; }
+
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
 
     [field: SerializeField] public WeaponDamage Weapon { get; private set; }

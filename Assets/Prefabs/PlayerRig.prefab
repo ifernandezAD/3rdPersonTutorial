@@ -259,7 +259,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3457037897236866522}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.036325023, y: 0.00000003925743, z: -0.000000020144398, w: 0.99934006}
+  m_LocalRotation: {x: -0.036325008, y: 0.000000026517228, z: -0.000000013604222,
+    w: 0.99934006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -339,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 3608542300392612529}
   serializedVersion: 2
   m_LocalRotation: {x: 1e-45, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000006882552, y: -0.00000059604645, z: 4.2720017}
+  m_LocalPosition: {x: -0.00000006882553, y: -0.00000059604645, z: 4.2720017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1043,7 +1044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6144613684323951485}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.018189566, y: 0.000000033833206, z: -0.00000001814533, w: 0.9998346}
+  m_LocalRotation: {x: -0.018189566, y: 0.000000033836844, z: -0.00000001814533, w: 0.9998346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1305,6 +1306,11 @@ PrefabInstance:
       propertyPath: <Ragdoll>k__BackingField
       value: 
       objectReference: {fileID: 2399325426005888942}
+    - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
+        type: 3}
+      propertyPath: <JumpForce>k__BackingField
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
         type: 3}
       propertyPath: <DodgeLenght>k__BackingField
