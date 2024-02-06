@@ -1314,7 +1314,7 @@ PrefabInstance:
     - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
         type: 3}
       propertyPath: <DodgeLenght>k__BackingField
-      value: 0.75
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
         type: 3}
@@ -1324,7 +1324,7 @@ PrefabInstance:
     - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
         type: 3}
       propertyPath: <DodgeDuration>k__BackingField
-      value: 0.1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3372839357476114872, guid: 744a4f64f6fbfbc46b1f69a1226712f0,
         type: 3}
