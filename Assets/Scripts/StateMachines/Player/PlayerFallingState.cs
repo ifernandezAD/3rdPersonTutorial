@@ -5,18 +5,21 @@ using UnityEngine;
 public class PlayerFallingState : PlayerBaseState
 {
     private readonly int FallHash = Animator.StringToHash("Fall");
-    private const float CrossFadeDuration = 0.1f;
 
     private Vector3 momentum;
 
-    public PlayerFallingState(PlayerStateMachine stateMachine) : base(stateMachine){}
-    
+    private const float CrossFadeDuration = 0.1f;
+
+    public PlayerFallingState(PlayerStateMachine stateMachine) : base(stateMachine) { }
+
     public override void Enter()
     {
         momentum = stateMachine.Controller.velocity;
-        momentum.y = 0;
+        momentum.y = 0f;
 
         stateMachine.Animator.CrossFadeInFixedTime(FallHash, CrossFadeDuration);
+
+        stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
     }
 
     public override void Tick(float deltaTime)
@@ -33,6 +36,11 @@ public class PlayerFallingState : PlayerBaseState
 
     public override void Exit()
     {
+        stateMachine.LedgeDetector.OnLedgeDetect -= HandleLedgeDetect;
+    }
 
+    private void HandleLedgeDetect(Vector3 ledgeForward)
+    {
+        stateMachine.SwitchState(new PlayerHangingState(stateMachine, ledgeForward));
     }
 }

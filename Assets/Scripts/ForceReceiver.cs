@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -35,6 +36,12 @@ public class ForceReceiver : MonoBehaviour
                 agent.enabled = true;
             }
         }
+    }
+
+    public void Reset()
+    {
+        verticalVelocity = 0f;
+        impact = Vector3.zero;
     }
 
     public void AddForce(Vector3 force)
