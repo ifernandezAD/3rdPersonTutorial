@@ -51,15 +51,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Cancel",
-                    "type": "Button",
-                    "id": "a6fda409-722d-4fa2-8923-23a89dac44c0",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "59866b66-bbcf-423a-8d36-748395dabf75",
@@ -274,17 +265,6 @@
                     "processors": "",
                     "groups": "Keyboard and Mouse",
                     "action": "Target",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b74c30d6-f595-4482-b446-ed5250a8a602",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard and Mouse",
-                    "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
